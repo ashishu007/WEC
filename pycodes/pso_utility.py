@@ -35,8 +35,8 @@ def calc_loss(params, kfold_res, y_true):
     # This is the 0-1 loss function, meaning the number of incorrect classification 
     # in whole data divided by number of samples in whole data.
     # Which is also euqal to error rate or 1-accuracy.
-    # loss = 1 - metrics.accuracy_score(yi, y_true)
-    loss = 1 - metrics.f1_score(yi, y_true, average='macro')
+    loss = 1 - metrics.accuracy_score(yi, y_true)
+    # loss = 1 - metrics.f1_score(yi, y_true, average='macro')
 
     return loss
 
